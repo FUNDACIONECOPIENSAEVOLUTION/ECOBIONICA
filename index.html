@@ -16,8 +16,8 @@
 .heroCard{align-self:start;margin-top:-24px;display:flex;flex-direction:column;gap:12px;padding:12px}
 .heroVideo{aspect-ratio:16/6.2;min-height:112px;max-height:145px;object-fit:cover}
 .modelGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.modelCard{position:relative;min-width:0;background:linear-gradient(180deg,#ffffff,#f6fcfa);border:1px solid rgba(53,184,206,.22);border-radius:18px;overflow:hidden;box-shadow:0 9px 24px rgba(10,67,62,.07)}
-.modelCard model-viewer{display:block;width:100%;height:210px;background:radial-gradient(circle at 50% 42%,#ffffff 0,#f5fbf8 58%,#edf8f7 100%);--poster-color:transparent}
+.modelCard{position:relative;min-width:0;background:linear-gradient(180deg,#eaf7ef,#dff3f7);border:1px solid rgba(53,184,206,.34);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(10,67,62,.12)}
+.modelCard model-viewer{display:block;width:100%;height:210px;background:radial-gradient(circle at 24% 18%,rgba(139,197,63,.48) 0,rgba(139,197,63,.22) 24%,transparent 52%),radial-gradient(circle at 82% 80%,rgba(53,184,206,.52) 0,rgba(53,184,206,.24) 28%,transparent 55%),linear-gradient(145deg,#bfe4cf 0%,#a9dce7 54%,#d8efcf 100%);--poster-color:transparent}
 .modelMeta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 11px 11px;border-top:1px solid #e6f1ee;background:rgba(255,255,255,.92)}
 .modelMeta strong{font-size:.85rem;color:var(--deep)}
 .modelMeta span{font-size:.72rem;color:var(--muted)}
@@ -47,11 +47,11 @@
 <video id="heroLogoVideo" class="heroVideo" autoplay muted loop playsinline preload="auto" disablepictureinpicture poster="logo%20ecobionica%20con%20trasparencia.png" aria-label="Animación del logo ECOBIONICA"><source src="ECOBIONICA_logo_reveal_10s.mp4" type="video/mp4"></video>
 <div class="modelGrid" aria-label="Modelos 3D interactivos de prótesis">
   <div class="modelCard">
-    <model-viewer src="https://raw.githubusercontent.com/instructorandradedcc/propuesta-AR/main/asetss/modelss/mano-iz-protesis.glb" alt="Modelo 3D de prótesis de mano" camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="18deg" shadow-intensity="1" exposure="1.05" interaction-prompt="auto" touch-action="pan-y"></model-viewer>
+    <model-viewer src="https://raw.githubusercontent.com/instructorandradedcc/propuesta-AR/main/asetss/modelss/mano-iz-protesis.glb" alt="Modelo 3D de prótesis de mano" camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="18deg" shadow-intensity="1.45" exposure="0.9" interaction-prompt="auto" touch-action="pan-y"></model-viewer>
     <div class="modelMeta"><strong>Prótesis de mano</strong><span>3D interactivo</span></div>
   </div>
   <div class="modelCard">
-    <model-viewer src="https://raw.githubusercontent.com/instructorandradedcc/propuesta-AR/main/asetss/modelss/protesis-mano-brazo.glb" alt="Modelo 3D de prótesis de mano y brazo" camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="18deg" shadow-intensity="1" exposure="1.05" interaction-prompt="auto" touch-action="pan-y"></model-viewer>
+    <model-viewer src="https://raw.githubusercontent.com/instructorandradedcc/propuesta-AR/main/asetss/modelss/protesis-mano-brazo.glb" alt="Modelo 3D de prótesis de mano y brazo" camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="18deg" shadow-intensity="1.45" exposure="0.9" interaction-prompt="auto" touch-action="pan-y"></model-viewer>
     <div class="modelMeta"><strong>Prótesis mano + brazo</strong><span>3D interactivo</span></div>
   </div>
 </div>
