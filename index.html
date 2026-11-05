@@ -48,6 +48,18 @@
 .paypalCampaignCard .paypalActions .btn{background:#ffcd44;color:#133d45;border:1px solid #e8b526;box-shadow:0 10px 22px rgba(140,117,18,.12)}
 .paypalCampaignCard .paypalNote{font-size:.8rem;color:#536d6b}
 @media(max-width:900px){.menu .paypalDonateNav{display:inline-flex}.paypalCampaignCard{align-items:flex-start}}
+
+/* ECOBIONICA — Elementos oficiales de la campaña PayPal, sin claves ni credenciales. */
+.paypalOfficial{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,410px);gap:20px;align-items:start;margin:22px 0 34px}
+.paypalQrWrap,.paypalIframeWrap{background:#fff;border:1px solid #d8e8e4;border-radius:22px;padding:20px;box-shadow:0 10px 26px rgba(10,67,62,.05)}
+.paypalQrWrap h3,.paypalIframeWrap h3{font-size:1.3rem;margin:0 0 8px;color:#0b6b67}
+.paypalQrRow{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.paypalQrRow img{width:200px;height:200px;max-width:100%;object-fit:contain;background:#fff;padding:5px;border:1px solid #c5dbd3;border-radius:10px;image-rendering:pixelated}
+.paypalDirectForm{margin:16px 0 6px}.paypalDirectForm input[type=image]{display:block;width:min(100%,300px);height:auto;max-height:115px;object-fit:contain}
+.paypalOfficialLink{display:inline-block;font-weight:750;text-decoration:underline;text-underline-offset:3px;color:#075e67}
+.paypalIframeWrap iframe{display:block;width:min(100%,382px);height:550px;max-width:100%;border:0;margin:14px auto 0}
+.paypalDisclaimer{font-size:.82rem;line-height:1.5;color:#536d6b;margin:12px 0 0}
+@media(max-width:900px){.paypalOfficial{grid-template-columns:1fr}.paypalIframeWrap iframe{max-width:100%}}
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
@@ -86,6 +98,30 @@
 <div class="paypalGoal">Meta / Goal: US$90,000</div></div>
 <div class="paypalActions"><a class="btn" href="https://www.paypal.com/donate/?campaign_id=CLQ5X4MWH87W8" target="_blank" rel="noopener noreferrer" aria-label="Abrir campaña ECOBIONICA de PayPal para donar">♥ Donate now / Dona ahora</a><span class="paypalNote">Pago gestionado directamente por PayPal.<br>Payment is processed by PayPal. No payment details are collected on this website.</span></div>
 </div><h2 class="title">Cinco formas de apoyar ECOBIONICA.</h2><p class="copy">La etapa inicial requiere alianzas para adquirir equipo, materiales y capacidades técnicas. La Fundación puede estructurar la participación según el tipo de aporte y formalizar las condiciones con cada entidad.</p>
+
+<div class="paypalOfficial" aria-label="Recursos oficiales de donación de la campaña ECOBIONICA">
+  <div class="paypalQrWrap">
+    <h3>Dona con PayPal / Donate with PayPal</h3>
+    <p class="copy">Escanea el código o utiliza el botón oficial para apoyar la campaña internacional de ECOBIONICA. Scan the QR code or use PayPal's official Donate button.</p>
+    <div class="paypalQrRow">
+      <a href="https://www.paypal.com/donate?campaign_id=CLQ5X4MWH87W8" target="_blank" rel="noopener noreferrer" aria-label="Escanear o abrir campaña de donaciones en PayPal"><img src="assets/paypal-ecobionica-qr.svg" width="200" height="200" alt="Código QR oficial de la campaña PayPal ECOBIONICA"></a>
+      <div><strong>Goal / Meta: US$90,000</strong><p class="copy">3D printing · PET recycling · Assistive technology</p><a href="assets/paypal-ecobionica-qr.svg" class="paypalOfficialLink" download="ECOBIONICA-PayPal-QR.svg">Descargar QR / Download QR</a></div>
+    </div>
+    <form class="paypalDirectForm" action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="campaign_id" value="CLQ5X4MWH87W8">
+      <input type="image" src="https://pics.paypal.com/00/s/ODY5YWU2MDAtM2Q1Zi00NGJjLWFiMTQtMjE0ODAzMWU4MzY5/file.PNG" name="submit" alt="Donate with PayPal / Donar con PayPal" title="Donar a ECOBIONICA con PayPal">
+      <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+    <a class="paypalOfficialLink" href="https://www.paypal.com/donate?campaign_id=CLQ5X4MWH87W8" target="_blank" rel="noopener noreferrer">Abrir campaña de donación / Open donation campaign</a>
+    <p class="paypalDisclaimer">El pago se realiza en PayPal. La Fundación no solicita datos bancarios en esta página y las donaciones están sujetas a la disponibilidad y verificaciones de PayPal.</p>
+  </div>
+  <div class="paypalIframeWrap">
+    <h3>Tarjeta oficial de PayPal</h3>
+    <p class="copy">Consulta la campaña y su información en la tarjeta proporcionada por PayPal. Si no carga, utiliza el enlace directo.</p>
+    <iframe src="https://www.paypal.com/giving/campaigns?campaign_id=CLQ5X4MWH87W8" title="PayPal donate campaign card — ECOBIONICA" loading="lazy" width="382" height="550" scrolling="no" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <a class="paypalOfficialLink" href="https://www.paypal.com/donate?campaign_id=CLQ5X4MWH87W8" target="_blank" rel="noopener noreferrer">Abrir tarjeta en PayPal</a>
+  </div>
+</div>
 <div class="supportGrid">
 <article class="supportCard"><span class="supportNum">01</span><h3>Patrocinar equipos</h3><p>Apoyar la adquisición de escáner 3D, impresora 3D, computador de diseño, extrusora u otros equipos requeridos.</p><button class="supportBtn" data-interest="Patrocinio de equipos para ECOBIONICA">Quiero patrocinar equipo</button></article>
 <article class="supportCard"><span class="supportNum">02</span><h3>Donar materiales e insumos</h3><p>Aportes en especie para prototipado, impresión, montaje, componentes, herramientas y procesos relacionados con el programa.</p><button class="supportBtn" data-interest="Donación de materiales e insumos para ECOBIONICA">Ofrecer materiales</button></article>
