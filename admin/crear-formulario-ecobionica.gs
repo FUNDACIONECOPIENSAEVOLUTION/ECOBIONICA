@@ -70,7 +70,7 @@ function crearFormularioECOBIONICA() {
   hoja.setColumnWidths(1,header.length,160);
   hoja.setColumnWidth(12,330);
   const estados = ['Recibido','Orientación inicial','Pendiente de información administrativa','Consentimientos pendientes','Revisión interna','Derivado a evaluación técnica','En seguimiento','Cerrado'];
-  hoja.getRange('I2:I5000').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(estados,true).build());
+  hoja.getRange(2, 9, Math.max(1, hoja.getMaxRows() - 1), 1).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(estados,true).build());
   form.setDestination(FormApp.DestinationType.SPREADSHEET,ss.getId());
   props.setProperty('ECOBIONICA_FORM_ID',form.getId());
   props.setProperty('ECOBIONICA_SHEET_ID',ss.getId());
