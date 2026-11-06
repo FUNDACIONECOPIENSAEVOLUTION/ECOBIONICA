@@ -37,6 +37,26 @@ function crearFormularioECOBIONICA() {
       .setPublishingSummary(false)
       .setProgressBar(true)
       .setConfirmationMessage('Recibimos tu pre-solicitud de orientación ECOBIONICA. La Fundación revisará la información de contacto. No envíes datos médicos ni fotografías por este formulario. La recepción no garantiza fabricación ni entrega.');
+  // Membrete visual: logos oficiales en la cabecera del formulario.
+  // En caso de que la importación de una imagen falle, la creación del formulario continúa.
+  const logos = [
+    {titulo: 'Fundación Ecopiensa Evolution',
+     url: 'https://raw.githubusercontent.com/FUNDACIONECOPIENSAEVOLUTION/ECOBIONICA/main/logo%20ecopiensa%20%20traspaewncia.png',
+     ancho: 110},
+    {titulo: 'Programa ECOBIONICA',
+     url: 'https://raw.githubusercontent.com/FUNDACIONECOPIENSAEVOLUTION/ECOBIONICA/main/logo%20ecobionica%20con%20trasparencia.png',
+     ancho: 280}
+  ];
+  logos.forEach(function(logo) {
+    try {
+      const respuesta = UrlFetchApp.fetch(logo.url, {muteHttpExceptions:true});
+      if (respuesta.getResponseCode() !== 200) throw new Error('HTTP ' + respuesta.getResponseCode());
+      form.addImageItem().setTitle(logo.titulo)
+        .setImage(respuesta.getBlob()).setWidth(logo.ancho);
+    } catch (error) {
+      Logger.log('Revisar incorporación del logo: ' + logo.titulo + ' - ' + error);
+    }
+  });
   form.addSectionHeaderItem().setTitle('1 · Contacto institucional')
       .setHelpText('Sólo datos mínimos para responder a tu solicitud.');
   form.addTextItem().setTitle('Nombre de la persona que realiza la solicitud').setRequired(true);
