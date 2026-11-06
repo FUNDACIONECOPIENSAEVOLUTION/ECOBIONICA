@@ -6,7 +6,7 @@
 
 **Formulario público para beneficiarios:** https://docs.google.com/forms/d/e/1FAIpQLSe3aQqmd3_6A7MqqYG-pXsvI5Hu9ucstaJUUokhXL24n8fYSw/viewform
 
-**Web oficial con guía, modelos reales, documentos y formulario integrado:**
+**Web oficial con guía integrada, modelos reales y un único Google Form público:**
 https://fundacionecopiensaevolution.github.io/ECOBIONICA/solicitud-protesis.html
 
 **No vuelva a ejecutar el código creando otro proyecto de Apps Script**, porque podría duplicar el formulario o generar otra hoja de respuestas. Mantenga el proyecto y los registros existentes.
@@ -24,7 +24,9 @@ https://fundacionecopiensaevolution.github.io/ECOBIONICA/solicitud-protesis.html
 
 ## Privacidad
 
-El formulario **no está destinado a recoger datos médicos, fotografías, vídeos, medidas corporales o historias clínicas**. Contiene datos de contacto y una confirmación de que la consulta se refiere a miembro superior. La información privada de personas beneficiarias no debe guardarse en el repositorio GitHub.
+El formulario **no está destinado a recoger datos médicos, fotografías, vídeos, medidas corporales o historias clínicas**. Contiene datos de contacto y una confirmación de que la consulta se refiere a miembro superior.
+
+El antiguo PDF imprimible de solicitud es redundante y se retiró del repositorio público; la guía de apoyo está completamente integrada en la página web. La ficha técnica también se retiró del repositorio público: la toma de medidas y evidencias debe hacerla exclusivamente personal profesional o de apoyo autorizado. Hay una ficha en blanco de dos páginas preparada como archivo de trabajo interno; conservarla en un almacenamiento privado de la Fundación, no en GitHub ni en formularios públicos. La información privada de personas beneficiarias no debe guardarse en el repositorio GitHub.
 
 La evaluación técnica posterior requerirá permisos específicos, responsable del tratamiento, protección para menores, controles de acceso y, cuando corresponda, medidas para transferencias internacionales de datos.
 
